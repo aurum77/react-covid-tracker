@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import diseaseService from "./services/diseaseService";
 
-function App() {
+const App = () => {
+  const [diseaseData, setDiseaseData] = useState({});
+
+  useEffect(() => {
+    diseaseService.getAll().then(diseaseData => setDiseaseData(diseaseData))
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="flexbox">
+        <div>
+          Total cases: {diseaseData.cases}
+          <br />
+          Today cases: {diseaseData.todayCases}
+          <br />
+          Active cases: {diseaseData.active}
+        </div>
+        <div>
+          Total deaths: {diseaseData.deaths}
+          <br />
+          Today deaths: {diseaseData.todayDeaths}
+          <br />
+          Critical cases: {diseaseData.critical}
+        </div>
+        <div>
+          Total recovered: {diseaseData.recovered}
+          <br />
+          Today recovered: {diseaseData.todayRecovered}
+          <br />
+          Total tests: {diseaseData.tests}
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
