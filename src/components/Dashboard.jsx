@@ -1,76 +1,63 @@
-import CardGroup from "react-bootstrap/CardGroup";
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
+import { Card } from "./Card";
+import { Flex } from "./Flex";
 
-const Dashboard = ({ data }) => {
+export const Dashboard = ({ data }) => {
   return (
-    <>
-      <Container className="mt-4">
-        <CardGroup>
-          <Card className="mb-2" bg="danger" text="light">
-            <Card.Body>
-              <Card.Title>Total cases:</Card.Title>
-              <Card.Text>{data.cases.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2" bg="light" text="dark">
-            <Card.Body>
-              <Card.Title>New cases today :</Card.Title>
-              <Card.Text>{data.todayCases.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2" bg="primary" text="light">
-            <Card.Body>
-              <Card.Title>Active cases:</Card.Title>
-              <Card.Text>{data.active.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-        </CardGroup>
-        <CardGroup>
-          <Card className="mb-2" bg="dark" text="white">
-            <Card.Body>
-              <Card.Title>Total deaths:</Card.Title>
-              <Card.Text>{data.deaths.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2" bg="secondary" text="white">
-            <Card.Body>
-              <Card.Title>New deaths today:</Card.Title>
-              <Card.Text>{data.todayDeaths.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2" bg="warning">
-            <Card.Body>
-              <Card.Title>Critical cases:</Card.Title>
-              <Card.Text>{data.critical.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-        </CardGroup>
-        <CardGroup>
-          <Card className="mb-2" bg="success" text="light">
-            <Card.Body>
-              <Card.Title>Total recovered:</Card.Title>
-              <Card.Text>{data.recovered.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2" bg="primary" text="light">
-            <Card.Body>
-              <Card.Title>New recoveries today:</Card.Title>
-              <Card.Text>
-                {data.todayRecovered.toLocaleString("en-US")}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2" bg="info">
-            <Card.Body>
-              <Card.Title>Total tests:</Card.Title>
-              <Card.Text>{data.tests.toLocaleString("en-US")}</Card.Text>
-            </Card.Body>
-          </Card>
-        </CardGroup>
-      </Container>
-    </>
+    <Flex>
+      <Card
+        background="Cyan"
+        color="Black"
+        header="Total cases:"
+        body={data.cases.toLocaleString("en-US")}
+      />
+      <Card
+        background="DarkTurquoise"
+        color="Black"
+        header="New cases today:"
+        body={data.todayCases.toLocaleString("en-US")}
+      />
+      <Card
+        background="MediumSlateBlue"
+        color="White"
+        header="Active cases:"
+        body={data.active.toLocaleString("en-US")}
+      />
+      <Card
+        background="Black"
+        color="White"
+        header="Total deaths:"
+        body={data.deaths.toLocaleString("en-US")}
+      />
+      <Card
+        background="Gray"
+        color="White"
+        header="New deaths today:"
+        body={data.todayDeaths.toLocaleString("en-US")}
+      />
+      <Card
+        background="Red"
+        color="White"
+        header="Critical cases:"
+        body={data.critical.toLocaleString("en-US")}
+      />
+      <Card
+        background="LightSeaGreen"
+        color="White"
+        header="Total recovered:"
+        body={data.recovered.toLocaleString("en-US")}
+      />
+      <Card
+        background="LightBlue"
+        color="Black"
+        header="New recoveries today:"
+        body={data.todayRecovered.toLocaleString("en-US")}
+      />
+      <Card
+        background="White"
+        color="MediumSlateBlue"
+        header="Total tests:"
+        body={data.tests.toLocaleString("en-US")}
+      />
+    </Flex>
   );
 };
-
-export default Dashboard;
