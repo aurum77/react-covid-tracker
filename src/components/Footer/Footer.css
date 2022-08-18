@@ -12,3 +12,9 @@
 .footerText {
   padding-top: 20px;
 }
+
+@media (max-width: 600px) {
+  .footer {
+    position: relative;
+  }
+}
