@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Dashboard from "./components/Dashboard"
+import { Footer } from "./components/Footer";
+import { Dashboard } from "./components";
 import diseaseService from "./services/diseaseService";
 
 const App = () => {
@@ -11,15 +12,15 @@ const App = () => {
 
   return (
     <div>
-    {Object.keys(diseaseData).length === 0 ? (
-      <div>loading</div>
-    )
-      :
-      (
-        <Dashboard data={diseaseData}/>
-    )
-    }
-</div>
+      {Object.keys(diseaseData).length === 0 ? (
+        <div>Fetching data from API</div>
+      ) : (
+        <Dashboard data={diseaseData} />
+      )}
+      <div>
+        <Footer />
+      </div>
+    </div>
   );
 };
 
