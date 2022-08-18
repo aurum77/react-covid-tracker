@@ -1,0 +1,17 @@
+.card {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 250px;
+  height: 150px;
+  border-radius: 13px;
+}
+
+.container {
+  padding: 4px 16px;
+}
+
+@media (max-width: 800px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
