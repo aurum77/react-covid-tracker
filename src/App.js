@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
 import { Dashboard } from "./components";
-import diseaseService from "./services/diseaseService";
+import * as diseaseService from "./services/diseaseService";
 
 const App = () => {
   const [diseaseData, setDiseaseData] = useState({});
