@@ -9,6 +9,46 @@
   padding-bottom: 10px;
 }
 
+.card--black {
+  background: Black;
+  color: White;
+}
+
+.card--turqouise {
+  background: DarkTurquoise;
+  color: Black;
+}
+
+.card--blue {
+  background: MediumSlateBlue;
+  color: White;
+}
+
+.card--gray {
+  background: DarkGray;
+  color: White;
+}
+
+.card--red {
+  background: Red;
+  color: White;
+}
+
+.card--lightgreen {
+  background: LightSeaGreen;
+  color: White;
+}
+
+.card--lightblue {
+  background: LightBlue;
+  color: Black;
+}
+
+.card--tests {
+  background: White;
+  color: MediumSlateBlue;
+}
+
 .card__header {
   font-size: 1.3rem;
   font-weight: bold;
