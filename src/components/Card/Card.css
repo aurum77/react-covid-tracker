@@ -8,8 +8,16 @@
   margin-bottom: 20px;
 }
 
-.container {
-  padding: 4px 16px;
+.card__header {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-left: 18px;
+  padding-top: 10px;
+}
+.card__body {
+  font-size: 2rem;
+  padding-left: 18px;
+  padding-top: 10px;
 }
 
 @media (max-width: 900px) {
