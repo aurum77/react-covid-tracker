@@ -5,56 +5,47 @@ export const Dashboard = ({ data }) => {
   return (
     <Flex>
       <Card
-        background="Cyan"
-        color="Black"
+        modifier="card--turquoise"
         header="Total cases:"
         body={data.cases.toLocaleString("en-US")}
       />
       <Card
-        background="DarkTurquoise"
-        color="Black"
+        modifier="card--blue"
         header="New cases today:"
         body={data.todayCases.toLocaleString("en-US")}
       />
       <Card
-        background="MediumSlateBlue"
-        color="White"
+        modifier="card--lightblue"
         header="Active cases:"
         body={data.active.toLocaleString("en-US")}
       />
       <Card
-        background="Black"
-        color="White"
+        modifier="card--black"
         header="Total deaths:"
         body={data.deaths.toLocaleString("en-US")}
       />
       <Card
-        background="Gray"
-        color="White"
+        modifier="card--gray"
         header="New deaths today:"
         body={data.todayDeaths.toLocaleString("en-US")}
       />
       <Card
-        background="Red"
-        color="White"
+        modifier="card--red"
         header="Critical cases:"
         body={data.critical.toLocaleString("en-US")}
       />
       <Card
-        background="LightSeaGreen"
-        color="White"
+        modifier="card--lightgreen"
         header="Total recovered:"
         body={data.recovered.toLocaleString("en-US")}
       />
       <Card
-        background="LightBlue"
-        color="Black"
+        modifier="card--lightblue"
         header="New recoveries today:"
         body={data.todayRecovered.toLocaleString("en-US")}
       />
       <Card
-        background="White"
-        color="MediumSlateBlue"
+        modifier="card--tests"
         header="Total tests:"
         body={data.tests.toLocaleString("en-US")}
       />
